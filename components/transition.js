@@ -553,10 +553,7 @@ $.fn.transition = function() {
             ;
           },
           currentAnimation: function() {
-            return (module.cache && module.cache.animation !== undefined)
-              ? module.cache.animation
-              : false
-            ;
+            return module.cache.animation || false;
           },
           currentDirection: function() {
             return module.is.inward()
@@ -617,7 +614,7 @@ $.fn.transition = function() {
           },
           userStyle: function(style) {
             style = style || $module.attr('style') || '';
-            return style.replace(/display.*?;/, '');
+            return style.replace(/display.*?;/, '');;
           },
           transitionExists: function(animation) {
             return $.fn.transition.exists[animation];
@@ -767,9 +764,9 @@ $.fn.transition = function() {
           module.remove.display();
           module.remove.visible();
           module.set.hidden();
-          module.force.hidden();
           settings.onHide.call(this);
           settings.onComplete.call(this);
+          module.force.hidden();
           // module.repaint();
         },
 
@@ -777,9 +774,9 @@ $.fn.transition = function() {
           module.verbose('Showing element', display);
           module.remove.hidden();
           module.set.visible();
-          module.force.visible();
           settings.onShow.call(this);
           settings.onComplete.call(this);
+          module.force.visible();
           // module.repaint();
         },
 

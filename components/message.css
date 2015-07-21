@@ -201,6 +201,7 @@
   margin-bottom: 1em;
 }
 .ui.attached.icon.message {
+  display: block;
   width: auto;
 }
 
@@ -222,9 +223,9 @@
 .ui.icon.message > .icon:not(.close) {
   display: block;
   -webkit-box-flex: 0;
-  -webkit-flex: 0 0 auto;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
   width: auto;
   line-height: 1;
   vertical-align: middle;
