@@ -427,3 +427,9 @@ th {
          Site Overrides
 *******************************/
 
+code,
+kbd,
+pre,
+samp {
+  font-family: Menlo, Monaco, 'Source Code Pro', consolas, monospace;
+}

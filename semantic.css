@@ -500,6 +500,13 @@ th {
 /*******************************
          Site Overrides
 *******************************/
+
+code,
+kbd,
+pre,
+samp {
+  font-family: Menlo, Monaco, 'Source Code Pro', consolas, monospace;
+}
 /*!
  * # Semantic UI x.x - Site
  * http://github.com/semantic-org/semantic-ui/
